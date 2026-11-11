@@ -58,6 +58,8 @@ public class GalleryIdlingResourceTest {
         gallery.perform(click());
         ViewInteraction recyclerView = onView(withId(R.id.recycle_view));
         recyclerView.perform(scrollToPosition(6));
+        recyclerView.check(matches(new RecyclerViewItemCountMatcher(10)));
+        recyclerView.check(new RecyclerViewTypeAssertion());
         ViewInteraction itemSeven = onView(allOf(
                 withId(R.id.item_number),
                 withText("7")
