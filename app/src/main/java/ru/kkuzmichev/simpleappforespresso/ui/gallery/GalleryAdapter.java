@@ -13,6 +13,7 @@ import java.util.List;
 import ru.kkuzmichev.simpleappforespresso.R;
 
 
+
 public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHolder> {
     private List<GalleryItem> itemList;
 
